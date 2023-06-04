@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator | GENRYPTOR</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <div class="header">
+            <h1>GENRYPTOR</h1>
+        </div>
+
+        <!-- Form -->
+        <form action="" method="post" class="gen">
+            {% csrf_token %}
+
+            <!-- passwd length -->
+            <input type='number' name="passwd_len" id="passwd_len" class="length" placeholder="Length of Password" min="8" max="50" required>
+
+            <!-- generated password -->
+            <div class="passwd" data-text = "Generated Password will appear here">
+                <p> {{ passwd }}</p>
+            </div>
+
+            <!-- Generate button -->
+            <input type="submit" value="Generate New Password" class="gen_b">
+        </form>
+
+        <!-- Encrypt Link -->
+        <div class="encrypt">
+            <a href="{% url 'encryptor' %}">Encrypt Password</a>
+        </div>
+
+        <!-- Decrypt Link -->
+        <div class="decrypt">
+            <a href="{% url 'decryptor' %}">Decrypt Password</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+		
+	</div>
+
+
+
+    
+    <div class="grid-overlay">
+        <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+    </div>
+</body>
+</html>

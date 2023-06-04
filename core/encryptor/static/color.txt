@@ -1,0 +1,2 @@
+--primary-color: #1f1b1b ;
+    --text-color:  cyan;

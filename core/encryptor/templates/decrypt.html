@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Decryptor | GENRYPTOR</title>
+    <link rel="stylesheet" href="{% static 'decryptor.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <div class="header">
+            <h1>GENRYPTOR</h1>
+        </div>
+
+        <!-- Form -->
+        <form action="" method="post" class="gen">
+            {% csrf_token %}
+
+            <!-- encryption to be decrypted -->
+            <input type='text' name="passwd" id="passwd" class="length" placeholder="Encryption to be Decrypted"  required>
+
+            <!-- Secret Key -->
+            <input type='password' name="secret-key" id="secret-key" class="length-2" placeholder="Secret Key"  required>
+
+            <!-- encrypted password -->
+            <div class="passwd" data-text = "Decrypted Password will appear here">
+                <p>{{org_passwd}}</p>
+            </div>
+
+            <!-- encrypt button -->
+            <input type="submit" value="Decrypt Password" class="gen_b">
+        </form>
+
+        <!-- Decrypt Link -->
+        <div class="encrypt">
+            <a href="{% url 'encryptor' %}">Encrypt Password</a>
+        </div>
+
+        <!-- Generator Link -->
+        <div class="generator">
+            <a href="{% url 'home' %}">Generate Password</a>
+        </div>    
+
+	</div>
+
+
+
+    
+    <div class="grid-overlay">
+        <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+    </div>
+</body>
+</html>

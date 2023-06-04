@@ -1,0 +1,244 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+  }
+  
+  :root{
+    --primary-color: #333 ;
+    --text-color:  cyan;
+  }
+  
+  body{
+    color: var(--text-color);
+    background-color: var(--primary-color); 
+    line-height: 1.6;
+    
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  h1,h2 {
+  margin: 10px 0;
+  line-height: 1.2;
+  
+  } 
+  
+  p {
+    margin: 10px 0;
+  }
+
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .header{
+    display: grid;
+    background-color: #1f1b1b ;
+    grid-column: 1/7;
+    padding: 17px;
+    justify-items: center;
+    align-items: center;
+    font-size: 20px;
+
+  }
+
+  .gen{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-row: 3/7;
+    align-items: center;
+    grid-column: 1/7;
+    justify-items: center;
+  }
+
+  .length{
+    grid-column: 1/3;
+    padding: 13px;
+    border-radius: 13px;
+    border: none;
+    background-color: #1f1b1b;
+    color: cyan;
+    width: 100%;
+    height: 90%;    
+    margin-left: 3px;
+    font-size: 17px;
+  }
+  
+  .length:hover{
+    border: 1px solid cyan;
+  }
+
+ .length:focus{
+  border: 2px solid cyan;
+  outline: none;
+ }
+
+ .length-2{
+    grid-column: 1/3;
+    padding: 13px;
+    border-radius: 13px;
+    border: none;
+    background-color: #1f1b1b;
+    color: cyan;
+    width: 100%;
+    height: 90%;    
+    margin-left: 3px;
+    font-size: 17px;
+  }
+
+
+  .length-2::-ms-reveal{
+    filter: invert(100%);
+  }
+
+  .length-2:hover{
+    border: 1px solid cyan;
+  }
+
+ .length-2:focus{
+  border: 2px solid cyan;
+  outline: none;
+ }
+
+ .passwd{
+  word-break: break-all;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-column: 3/7;
+  grid-row: 1/3;
+  background-color: #1f1b1b;
+  padding: 12px;
+  border-radius: 13px;
+  font-size: 20px;
+  width: 95%;
+  height: 100%;
+ }
+
+ .passwd p{
+  margin: 0;
+  font-size: 20px;
+
+ }
+
+ .passwd span{
+  color: lightgrey;
+ }
+
+ .passwd:hover{
+  border: 2px solid cyan;
+ }
+
+ .gen_b{
+  grid-column: 1/7;
+  background-color: #1f1b1b;
+  width: 100%;
+  padding: 13px;
+  font-size: 20px;
+  color:cyan ;
+  border: 1px solid cyan;
+  border-radius: 13px;
+  grid-row: 3/4;
+  align-self:self-end;
+ }
+ .gen_b:hover{
+  background-color: cyan;
+  color: #1f1b1b;
+  font-weight: bold;
+  border: 3px solid black;
+ }
+
+ .gen_b:active{
+  background-color: #00ffffd6;
+ }
+
+ ::-ms-input-placeholder {
+  color: #f2e9e9;
+}
+
+.encrypt{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-row: 6/7;
+  grid-column: 1/2;
+  border-radius: 13px;
+  background-color: #1f1b1b;
+  height: 50%;
+  margin-left: 5px;
+}
+.encrypt:hover{
+  border: 1px solid cyan;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  
+}
+
+.encrypt:active{
+  border: 2px solid cyan;
+}
+
+.generator{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-row: 6/7;
+  grid-column: 6/7;
+  border-radius: 13px;
+  background-color: #1f1b1b;
+  height: 50%;
+  margin-right: 5px;
+}
+.generator:hover{
+  border: 1px solid cyan;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  
+}
+
+.generator:active{
+  border: 2px solid cyan;
+}
+
+::selection{
+    background-color: cyan;
+    color: #1f1b1b;
+}
+
+  /* Grid overlay code */
+
+  .grid-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100%, auto);
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    padding: 0;
+    /* change "display:none;" to "display:grid;" to view layout and vice-versa */
+    display: none; 
+}
+
+.grid-overlay p{
+    border: 1px solid;
+    margin: 0;
+    background:transparent;
+}
+
+/* Grid overlay code end */
